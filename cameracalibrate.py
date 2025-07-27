@@ -6,6 +6,9 @@ from pathlib import Path
 
 CamIndex = 0
 # Change your camera index here
+Intercept = 16.5
+# The distance from the chessboard's lower-left corner of the bottom rank to the robot’s
+
 
 Cam = cv2.VideoCapture(CamIndex,cv2.CAP_V4L2)
 Cam.set(cv2.CAP_PROP_AUTO_EXPOSURE, 1)
@@ -71,8 +74,7 @@ if Corners is not None:
     print(fBottomY)
     iX,iY = applyPerspectiveTransform(320,fBottomY,aPerspectiveMatrix)
     fHorizontalB = -fPixelToCM * iX
-    fVerticalB = 16.5 + fPixelToCM * iY
-    # The distance from the chessboard's lower-left corner of the bottom rank to the robot’s center.
+    fVerticalB = Intercept + fPixelToCM * iY
 
     aPixelToCM = np.array([fPixelToCM,fHorizontalB,fVerticalB])
     print(fVerticalB)
