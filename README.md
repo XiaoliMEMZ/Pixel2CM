@@ -14,7 +14,7 @@
 本项目是一个为 RCJ足球重量组（Open）多摄像头机器人设计的坐标映射工具库。通过逆透视变换算法，本程序可以以机器人圆柱形机身的圆心为原点，建立一个相对坐标系，将摄像头视野中的场地物体（如球、其他机器人）的像素坐标精确转换为以厘米为单位的真实世界坐标。
 
 <div align="center">
-  <img src="example.png" width="720" alt="Example">
+  <img src="example.png" width="1280" alt="Example">
   <br>
 </div>
 
